@@ -8,6 +8,7 @@
 	List<PersonVo> personList = (List<PersonVo>)request.getAttribute("pList");	//어트리뷰트는 오브젝트로 담겨있기 때문에 형변환을 꼭 해줘야함 ex --> (List<PersonList>)로 형변환 해줌
 	System.out.println("=====list.jsp======");
 	System.out.println(personList);
+	
 %>
 
 
@@ -18,7 +19,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="/phonebook2/pbc" method="get">
+
 		<%for (int i=0; i<personList.size(); i++) { %>
 			<table border="1">
 				<tr>
@@ -34,13 +35,16 @@
 					<td><%=personList.get(i).getCompany() %></td>
 				</tr>
 				<tr>
-					<td><button type="submit" name="action" value="updateForm"> 수정 </button></td>
-					<td><button type="submit" name="action" value="delete"> 삭제 </button></td>
+				
+					<td><form action="/phonebook2/pbc" method="get"><input type="hidden" name="id" value="<%=personList.get(i).getPersonId() %>" ><button type="submit" name="action" value="updateForm"> 수정 </button></form></td>
+					<td><form action="/phonebook2/pbc" method="get"><input type="hidden" name="action" value="delete" ><input type="hidden" name="id" value="<%=personList.get(i).getPersonId() %>" ><button>삭제 </button> </form></td>
+				
 				</tr>
 			</table>
 			<br>
 		<%} %>
-	</form>
+
+		
 	<a href="">추가 번호 등록</a>
 </body>
 </html>
