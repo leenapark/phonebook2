@@ -45,6 +45,6 @@
 		<%} %>
 
 		
-	<a href="">추가 번호 등록</a>
+	<a href="/phonebook2/pbc?action=wform">추가 번호 등록</a>
 </body>
 </html>
