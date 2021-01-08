@@ -103,7 +103,7 @@ public class PhoneController extends HttpServlet {
 			
 			
 			//업데이트 된 정보 확인용 
-			//System.out.println(personVo.toString());
+			System.out.println(personVo.toString());
 			
 
 			phoneDao.getUpdate(personVo);

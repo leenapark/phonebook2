@@ -38,7 +38,7 @@
 				
 					<td><a href="/phonebook2/pbc?action=updateForm&id=<%=personList.get(i).getPersonId() %>"> 수정 </a></td>
 					<td><a href="/phonebook2/pbc?action=delete&id=<%=personList.get(i).getPersonId() %>"><input type="hidden" name="action" value="delete" >삭제</a></td>
-				
+					
 				</tr>
 			</table>
 			<br>

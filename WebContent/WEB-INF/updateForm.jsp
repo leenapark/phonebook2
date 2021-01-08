@@ -23,7 +23,8 @@
 		이름(name):<input type="text" name="name" value="<%=personVo.getName()%>"><br>
 		핸드폰(hp):<input type="text" name="hp" value="<%=personVo.getHp()%>"><br>
 		회사(company):<input type="text" name="company" value="<%=personVo.getCompany()%>"><br>
-		<!-- 아래 두 영역은 히든 처리로 노출하지 않는 부분 -->
+		
+		<!-- 아래 두 영역은 히든 처리로 노출하지 않는 부분 test 때만 text로 두고 확인한다 -->
 		id: <input type="text" name="id" value="<%=personVo.getPersonId() %>">		
 		action: <input type="text" name="action" value="update"><br>
 		<button type="submit">등록</button>
