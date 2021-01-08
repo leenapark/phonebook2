@@ -36,8 +36,8 @@
 				</tr>
 				<tr>
 				
-					<td><form action="/phonebook2/pbc" method="get"><input type="hidden" name="id" value="<%=personList.get(i).getPersonId() %>" ><button type="submit" name="action" value="updateForm"> 수정 </button></form></td>
-					<td><form action="/phonebook2/pbc" method="get"><input type="hidden" name="action" value="delete" ><input type="hidden" name="id" value="<%=personList.get(i).getPersonId() %>" ><button>삭제 </button> </form></td>
+					<td><a href="/phonebook2/pbc?action=updateForm&id=<%=personList.get(i).getPersonId() %>"> 수정 </a></td>
+					<td><a href="/phonebook2/pbc?action=delete&id=<%=personList.get(i).getPersonId() %>"><input type="hidden" name="action" value="delete" >삭제</a></td>
 				
 				</tr>
 			</table>

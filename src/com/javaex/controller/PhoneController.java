@@ -70,8 +70,9 @@ public class PhoneController extends HttpServlet {
 			System.out.println("전화번호 삭제");
 
 			int personId = Integer.parseInt(request.getParameter("id")); // 몇번째 걸 삭제할 건지 아이디를 가져와야함
-			System.out.println(personId);
+			System.out.println(personId);	//가져온 숫자가 잘 들어오는지 확인
 
+			
 			PhoneDao phoneDao = new PhoneDao();
 			phoneDao.getDelete(personId);
 
@@ -84,10 +85,7 @@ public class PhoneController extends HttpServlet {
 			System.out.println(personId);
 
 			System.out.println("등록 폼 처리");
-			/*
-			 * PhoneDao phoneDao = new PhoneDao(); PersonVo personVo =
-			 * phoneDao.getPerson(personId);
-			 */
+
 			RequestDispatcher rd = request.getRequestDispatcher("./WEB-INF/updateForm.jsp");
 			rd.forward(request, response);
 
@@ -102,9 +100,11 @@ public class PhoneController extends HttpServlet {
 			PersonVo personVo = new PersonVo(personId, name, hp, company);
 			PhoneDao phoneDao = new PhoneDao();
 
-			/*
-			 * 업데이트 된 정보 확인용 System.out.println(personVo.toString());
-			 */
+			
+			
+			//업데이트 된 정보 확인용 
+			//System.out.println(personVo.toString());
+			
 
 			phoneDao.getUpdate(personVo);
 
@@ -117,8 +117,8 @@ public class PhoneController extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// 위 코드를 같이 쓰고 싶으면 이 기본 생성 코드를 사용
-		// doGet(request, response);
+		// 위 코드를 같이 쓰고 싶으면 이 기본 생성 코드를 사용 (post 방식)
+		doGet(request, response);
 	}
 
 }
