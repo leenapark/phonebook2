@@ -155,10 +155,10 @@ public class PhoneDao {
 			 * update person set hp = ?, company = ? where phone_id = ?;
 			 */
 			String query = "";
-			query += "update person \n";
-			query += "set 	 name = ?, \n";
-			query += "		 hp = ?, \n";
-			query += "		 company = ? \n";
+			query += "update person ";
+			query += "set 	 name = ?, ";
+			query += "		 hp = ?, ";
+			query += "		 company = ? ";
 			query += "		 where phone_id = ?";
 
 			// 쿼리문 테스트
